@@ -1,4 +1,3 @@
-
 # DictaLM-2.0-Instruct Fine-Tuning Project
 
 This project aims to enhance the performance of the DictaLM-2.0-Instruct model by fine-tuning it on a bilingual (English-Hebrew) dataset. The project utilizes a unique dataset derived from the alpaca-gpt4 English data, which has been translated into Hebrew to create a rich, bilingual resource for training.
@@ -11,7 +10,7 @@ The DictaLM-2.0-Instruct, a model provided by Hugging Face and tailored for inst
 
 To prevent catastrophic forgetting, particularly in the model's ability to handle English, 10% of the training data is retained in English.
 
-### Fine-Tuning Methodology
+## Fine-Tuning Methodology
 
 The model is fine-tuned using the LoRA (Low-Rank Adaptation) technique, which allows for efficient adaptation of large language models with minimal updates to the model's parameters. This method is particularly suited for adapting a model to new languages and tasks without extensive retraining.
 
@@ -22,53 +21,30 @@ The dataset, derived from the alpaca-gpt4 database, includes:
 - Retention of 10% original English questions to maintain language versatility.
 - The dataset is split into training, validation, and test sets to ensure thorough evaluation.
 
+## Data Creation
+
+To generate the bilingual dataset, we utilized the DictaLM-2.0-Instruct model's translation capabilities. The entire alpaca-gpt4 database was processed through the model with prompts requesting translations into Hebrew. This approach ensures that the dataset reflects realistic and contextually appropriate translations.
+
+### Repository Content
+
+This repository includes:
+- **Data Creation Notebook:** Detailed Jupyter notebooks outlining the process of translating the alpaca-gpt4 database into Hebrew.
+- **Dataset Files:** Both the original and translated datasets are provided for transparency and reproducibility.
+- **Training Notebook:** A Jupyter notebook detailing the fine-tuning process using the LoRA technique on the DictaLM-2.0-Instruct model.
+
+The included materials aim to provide a comprehensive overview of the project's methodology and enable others to replicate or build upon this work.
+
 ## Usage
 
-To use this model for either of the fine-tuned tasks, follow these steps:
-
-### Setup
-
-Ensure you have Python and the necessary libraries installed:
-
-```bash
-pip install transformers torch
-```
-
-### Running the Model
-
-Import the model and tokenizer:
-
-```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-model = AutoModelForCausalLM.from_pretrained("your-model-path")
-tokenizer = AutoTokenizer.from_pretrained("your-model-path")
-```
-
-Example code to use the model:
-
-```python
-def get_answer(question):
-    inputs = tokenizer(question, return_tensors="pt")
-    outputs = model.generate(inputs["input_ids"])
-    answer = tokenizer.decode(outputs[0], skip_special_tokens=True)
-    return answer
-
-# Example usage
-print(get_answer("שאלה בעברית"))
-```
+[Include instructions similar to previous suggestions]
 
 ## Contributing
 
-Contributions to this project are welcome! Please fork the repository, make your changes, and submit a pull request.
+[Include contribution guidelines similar to previous suggestions]
 
 ## Citation
 
-If you use this model or the fine-tuned dataset, please cite:
-
-```
-[Will add citation details based on your publications or data source]
-```
+[Include citation details similar to previous suggestions]
 
 ## License
 
@@ -77,6 +53,3 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 ## Acknowledgements
 
 This project utilizes resources and tools from Hugging Face and is based on data from the alpaca-gpt4 project.
-
----
-For more details on the model architecture and the fine-tuning process, visit our [project wiki](wiki-link).
