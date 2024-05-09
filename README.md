@@ -18,7 +18,7 @@ The model is fine-tuned using the LoRA (Low-Rank Adaptation) technique, which al
 
 ## Dataset
 
-The dataset, derived from the alpaca-gpt4 database, includes:
+The dataset, derived from the [alpaca-gpt4-dataset](https://huggingface.co/datasets/vicgalle/alpaca-gpt4), includes:
 - Translations of the original English content into Hebrew.
 - Retention of 10% original English questions to maintain language versatility.
 - The dataset is split into training, validation, and test sets to ensure thorough evaluation.
