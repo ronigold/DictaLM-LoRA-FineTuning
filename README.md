@@ -2,7 +2,7 @@
 
 This project aims to enhance the performance of the DictaLM-2.0-Instruct model by fine-tuning it on a bilingual (English-Hebrew) dataset. The project utilizes a unique dataset derived from the alpaca-gpt4 English data, which has been translated into Hebrew to create a rich, bilingual resource for training.
 
-![Alt text](/images/2024-05-09_132605.png "Optional title")
+![Alt text](2024-05-09_132605.png "Optional title")
 
 ## Project Overview
 
