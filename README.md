@@ -2,7 +2,7 @@
 
 This project aims to enhance the performance of the DictaLM-2.0-Instruct model by fine-tuning it on a bilingual (English-Hebrew) dataset. The project utilizes a unique dataset derived from the alpaca-gpt4 English data, which has been translated into Hebrew to create a rich, bilingual resource for training.
 
-![Leaderboard](en_he.png "Hebrew LLM Leaderboard")
+![Leaderboard](images/en_he.png "Hebrew LLM Leaderboard")
 
 ## Project Overview
 
@@ -18,7 +18,7 @@ The model is fine-tuned using the LoRA (Low-Rank Adaptation) technique, which al
 
 ## Dataset
 
-![Data Schema](en_he.png "Data sample from the training set before and after the translation")
+![Data Schema](images/en_he.png "Data sample from the training set before and after the translation")
 
 The dataset, derived from the alpaca-gpt4 database, includes:
 - Translations of the original English content into Hebrew.
