@@ -18,14 +18,14 @@ The model is fine-tuned using the LoRA (Low-Rank Adaptation) technique, which al
 
 ## Dataset
 
-![Data Schema](images/en_he.png "Data sample from the training set before and after the translation")
-
 The dataset, derived from the alpaca-gpt4 database, includes:
 - Translations of the original English content into Hebrew.
 - Retention of 10% original English questions to maintain language versatility.
 - The dataset is split into training, validation, and test sets to ensure thorough evaluation.
 
 ## Data Creation
+
+![Data Schema](images/en_he.png "Data sample from the training set before and after the translation")
 
 To generate the bilingual dataset, we utilized the DictaLM-2.0-Instruct model's translation capabilities. The entire alpaca-gpt4 database was processed through the model with prompts requesting translations into Hebrew. This approach ensures that the dataset reflects realistic and contextually appropriate translations.
 
